@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.mystore.testcases.ConfirmationPageTest">
+        <methods>
+          <include name="addtocart"/>
+          <include name="teardown"/>
+          <include name="loadConfig"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.ConfirmationPageTest -->
+      <class name="com.mystore.testcases.PrdouctPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="Productcheck" invocation-numbers="1"/>
+          <include name="loadConfig"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.PrdouctPageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
