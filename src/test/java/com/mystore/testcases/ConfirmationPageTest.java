@@ -31,6 +31,7 @@ public class ConfirmationPageTest extends BaseClass {
 	public void setup() {
 		launchApp(); 
 		driver.manage().window().maximize();
+		System.out.println("App");
 	}
 		
   @Test(priority=0)
