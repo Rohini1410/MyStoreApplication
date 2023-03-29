@@ -49,6 +49,7 @@ public class ConfirmationPageTest extends BaseClass {
 	checkout.verifyTitle();
 	checkout.clickoncheckout();
 	checkout.enterdetails();
+	System.out.println("You lost me");
 
 	OverviewPage overpage = new OverviewPage();
 	overpage.verifydetails();
