@@ -26,6 +26,7 @@ public class IndexPageTest extends BaseClass {
 	public void setup() {
 		launchApp(); 
 		ExtentManager.setExtent();
+		Sytem.out.println("out put check ")
 	}
 	
 	
