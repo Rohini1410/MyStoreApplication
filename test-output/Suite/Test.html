@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/1/1</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Mar 26 17:39:10 IST 2023</td>
+<td>Started on:</td><td>Mon Mar 27 19:12:17 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>26 seconds (26108 ms)</td>
+<tr><td>Total time:</td><td>16 seconds (16475 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,31 +68,27 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.mystore.testcases.PrdouctPageTest.Productcheck()'><b>Productcheck</b><br>Test class: com.mystore.testcases.PrdouctPageTest<br>Parameters: problem_user, secret_sauce</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at com.pageobjects.ProductPage.verifyaddtocartt(ProductPage.java:34)
-	at com.mystore.testcases.PrdouctPageTest.Productcheck(PrdouctPageTest.java:31)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1871678080", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1871678080'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:93)
-	at org.testng.Assert.failNotEquals(Assert.java:512)
-	at org.testng.Assert.assertTrue(Assert.java:41)
-	at org.testng.Assert.assertTrue(Assert.java:51)
-	at com.pageobjects.ProductPage.verifyaddtocartt(ProductPage.java:34)
-	at com.mystore.testcases.PrdouctPageTest.Productcheck(PrdouctPageTest.java:31)
+<td title='com.mystore.testcases.PrdouctPageTest.tearDown()'><b>tearDown</b><br>Test class: com.mystore.testcases.PrdouctPageTest</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.mystore.testcases.PrdouctPageTest.tearDown(PrdouctPageTest.java:49)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1260012504", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1260012504'><pre>java.lang.NullPointerException
+	at com.mystore.testcases.PrdouctPageTest.tearDown(PrdouctPageTest.java:49)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:723)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
@@ -113,8 +109,29 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>1</td>
-<td>com.mystore.testcases.PrdouctPageTest@ae45eb6</td></tr>
+<td>0</td>
+<td>com.mystore.testcases.PrdouctPageTest@7d9d1a19</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.mystore.testcases.PrdouctPageTest.setup()'><b>setup</b><br>Test class: com.mystore.testcases.PrdouctPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.mystore.testcases.PrdouctPageTest@7d9d1a19</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
 <tr>
 <td title='com.mystore.testcases.ConfirmationPageTest.addtocart()'><b>addtocart</b><br>Test class: com.mystore.testcases.ConfirmationPageTest</td>
 <td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
@@ -126,11 +143,11 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
 	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
-	at com.actiondriver.Action.click(Action.java:20)
+	at com.actiondriver.Action.click(Action.java:26)
 	at com.pageobjects.IndexPage.login(IndexPage.java:37)
 	at com.mystore.testcases.ConfirmationPageTest.addtocart(ConfirmationPageTest.java:40)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace425015667", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace425015667'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace518692141", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace518692141'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;LAPTOP-0HFMUK50&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
 Driver info: driver.version: RemoteWebDriver
@@ -139,7 +156,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
 	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
-	at com.actiondriver.Action.click(Action.java:20)
+	at com.actiondriver.Action.click(Action.java:26)
 	at com.pageobjects.IndexPage.login(IndexPage.java:37)
 	at com.mystore.testcases.ConfirmationPageTest.addtocart(ConfirmationPageTest.java:40)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -169,7 +186,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.mystore.testcases.ConfirmationPageTest@68c4039c</td></tr>
+<td>com.mystore.testcases.ConfirmationPageTest@4883b407</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -181,18 +198,63 @@ Driver info: driver.version: RemoteWebDriver
 <tr>
 <td title='com.mystore.testcases.PrdouctPageTest.Productcheck()'><b>Productcheck</b><br>Test class: com.mystore.testcases.PrdouctPageTest<br>Parameters: standard_user, secret_sauce</td>
 <td></td>
-<td>2</td>
-<td>com.mystore.testcases.PrdouctPageTest@ae45eb6</td></tr>
+<td>0</td>
+<td>com.mystore.testcases.PrdouctPageTest@7d9d1a19</td></tr>
 <tr>
 <td title='com.mystore.testcases.CartPageTest.addtocart()'><b>addtocart</b><br>Test class: com.mystore.testcases.CartPageTest</td>
 <td></td>
-<td>2</td>
-<td>com.mystore.testcases.CartPageTest@27efef64</td></tr>
+<td>1</td>
+<td>com.mystore.testcases.CartPageTest@5622fdf</td></tr>
 <tr>
 <td title='com.mystore.testcases.IndexPageTest.loginTest()'><b>loginTest</b><br>Test class: com.mystore.testcases.IndexPageTest</td>
 <td></td>
-<td>1</td>
-<td>com.mystore.testcases.IndexPageTest@59f99ea</td></tr>
+<td>0</td>
+<td>com.mystore.testcases.IndexPageTest@6093dd95</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.mystore.testcases.PrdouctPageTest.Productcheck()'><b>Productcheck</b><br>Test class: com.mystore.testcases.PrdouctPageTest</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.mystore.testcases.PrdouctPageTest.tearDown(PrdouctPageTest.java:49)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1833343025", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1833343025'><pre>java.lang.NullPointerException
+	at com.mystore.testcases.PrdouctPageTest.tearDown(PrdouctPageTest.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:723)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.mystore.testcases.PrdouctPageTest@7d9d1a19</td></tr>
 </table><p>
 </body>
 </html>

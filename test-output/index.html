@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods, 2 failed,   3 passed</span>
+                    <span class="method-stats">5 methods, 1 failed,  1 skipped,  3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,15 +102,24 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.mystore.testcases.PrdouctPageTest" hash-for-method="Productcheck(problem_user, secret_sauce)">Productcheck(problem_user, secret_sauce)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.mystore.testcases.ConfirmationPageTest" hash-for-method="addtocart">addtocart</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.mystore.testcases.PrdouctPageTest" hash-for-method="Productcheck">Productcheck</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -166,7 +175,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
 	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
-	at com.actiondriver.Action.click(Action.java:20)
+	at com.actiondriver.Action.click(Action.java:26)
 	at com.pageobjects.IndexPage.login(IndexPage.java:37)
 	at com.mystore.testcases.ConfirmationPageTest.addtocart(ConfirmationPageTest.java:40)
 ... Removed 25 stack frames
@@ -175,42 +184,25 @@ Driver info: driver.version: RemoteWebDriver
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-failed">
+          <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">com.mystore.testcases.PrdouctPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Productcheck(problem_user, secret_sauce)">
-                  </a> <!-- Productcheck(problem_user, secret_sauce) -->
+                  <a name="Productcheck">
+                  </a> <!-- Productcheck -->
                   <span class="method-name">Productcheck</span>
-                  <span class="parameters">(problem_user, secret_sauce)</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at com.pageobjects.ProductPage.verifyaddtocartt(ProductPage.java:34)
-	at com.mystore.testcases.PrdouctPageTest.Productcheck(PrdouctPageTest.java:31)
-... Removed 29 stack frames
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.mystore.testcases.PrdouctPageTest.tearDown(PrdouctPageTest.java:49)
+... Removed 27 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.mystore.testcases.CartPageTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="addtocart">
-                  </a> <!-- addtocart -->
-                  <span class="method-name">addtocart</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-skipped -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -242,6 +234,21 @@ Driver info: driver.version: RemoteWebDriver
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.mystore.testcases.CartPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addtocart">
+                  </a> <!-- addtocart -->
+                  <span class="method-name">addtocart</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -252,12 +259,15 @@ Driver info: driver.version: RemoteWebDriver
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.utility.ListenerClass&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.mystore.testcases.ConfirmationPageTest&quot;/&gt;
-      &lt;class name=&quot;com.mystore.testcases.PrdouctPageTest&quot;/&gt;
       &lt;class name=&quot;com.mystore.testcases.IndexPageTest&quot;/&gt;
       &lt;class name=&quot;com.mystore.testcases.CartPageTest&quot;/&gt;
+      &lt;class name=&quot;com.mystore.testcases.ConfirmationPageTest&quot;/&gt;
+      &lt;class name=&quot;com.mystore.testcases.PrdouctPageTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -299,30 +309,30 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Productcheck')
-data.setCell(0, 2, 'com.mystore.testcases.PrdouctPageTest')
-data.setCell(0, 3, 2441);
+data.setCell(0, 1, 'addtocart')
+data.setCell(0, 2, 'com.mystore.testcases.CartPageTest')
+data.setCell(0, 3, 1658);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'addtocart')
-data.setCell(1, 2, 'com.mystore.testcases.CartPageTest')
-data.setCell(1, 3, 2252);
+data.setCell(1, 1, 'loginTest')
+data.setCell(1, 2, 'com.mystore.testcases.IndexPageTest')
+data.setCell(1, 3, 781);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'Productcheck')
 data.setCell(2, 2, 'com.mystore.testcases.PrdouctPageTest')
-data.setCell(2, 3, 1304);
+data.setCell(2, 3, 781);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'loginTest')
-data.setCell(3, 2, 'com.mystore.testcases.IndexPageTest')
-data.setCell(3, 3, 1071);
+data.setCell(3, 1, 'addtocart')
+data.setCell(3, 2, 'com.mystore.testcases.ConfirmationPageTest')
+data.setCell(3, 3, 13);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'addtocart')
-data.setCell(4, 2, 'com.mystore.testcases.ConfirmationPageTest')
-data.setCell(4, 3, 62);
+data.setCell(4, 1, 'Productcheck')
+data.setCell(4, 2, 'com.mystore.testcases.PrdouctPageTest')
+data.setCell(4, 3, 1);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -337,12 +347,23 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">6 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.mystore.testcases.IndexPageTest</span>
+              <span class="ignored-class-name">com.mystore.testcases.PrdouctPageTest</span>
               <div class="ignored-methods-div">
+                <span class="ignored-method-name">afterSuite</span>
+                <br/>
+                <span class="ignored-method-name">loadConfig</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.mystore.testcases.ConfirmationPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">afterSuite</span>
+                <br/>
                 <span class="ignored-method-name">loadConfig</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
@@ -350,13 +371,8 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.mystore.testcases.CartPageTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">loadConfig</span>
+                <span class="ignored-method-name">afterSuite</span>
                 <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.mystore.testcases.PrdouctPageTest</span>
-              <div class="ignored-methods-div">
                 <span class="ignored-method-name">loadConfig</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
@@ -369,72 +385,79 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.mystore.testcases.ConfirmationPageTest</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
+              <div class="chronological-class-name">com.mystore.testcases.IndexPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
                 <span class="method-name">loadConfig</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
+              </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">40 ms</span>
+                <span class="method-start">255 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginTest</span>
+                <span class="method-start">5139 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">5933 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.mystore.testcases.CartPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">6322 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">addtocart</span>
+                <span class="method-start">8143 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">9802 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.mystore.testcases.ConfirmationPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">10526 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">teardown</span>
-                <span class="method-start">4318 ms</span>
+                <span class="method-start">12667 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">addtocart</span>
-                <span class="method-start">5148 ms</span>
+                <span class="method-start">13392 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.mystore.testcases.PrdouctPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">6011 ms</span>
+                <span class="method-start">13948 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">Productcheck(standard_user, secret_sauce)</span>
-                <span class="method-start">9841 ms</span>
+                <span class="method-start">15926 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">12282 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
+              <div class="configuration-method after">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">Productcheck(problem_user, secret_sauce)</span>
-                <span class="method-start">14815 ms</span>
-              </div> <!-- test-method -->
+                <span class="method-name">tearDown</span>
+                <span class="method-start">16708 ms</span>
+              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.mystore.testcases.IndexPageTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">16127 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">loginTest</span>
-                <span class="method-start">19209 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.mystore.testcases.CartPageTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">20288 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">addtocart</span>
-                <span class="method-start">22965 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">25225 ms</span>
-              </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <span class="method-name">afterSuite</span>
+                <span class="method-start">16746 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
