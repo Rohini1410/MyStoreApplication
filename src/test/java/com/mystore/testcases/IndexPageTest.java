@@ -1,16 +1,9 @@
 package com.mystore.testcases;
-
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-
 import com.BaseClass.BaseClass;
 import com.actiondriver.Action;
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.pageobjects.IndexPage;
 import com.utility.ExtentManager;
 import com.utility.Log;
@@ -26,7 +19,7 @@ public class IndexPageTest extends BaseClass {
 	public void setup() {
 		launchApp(); 
 		ExtentManager.setExtent();
-		Sytem.out.println("out put check ")
+		System.out.println("out put check ");
 	}
 	
 	
